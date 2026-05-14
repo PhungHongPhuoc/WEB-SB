@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hướng Dẫn Cài Đặt Starbase App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcfcfc;
+        }
+
+        .brand-gradient {
+            background: linear-gradient(135deg, #fb923c 0%, #f97316 50%, #ea580c 100%);
+        }
+
+        .brand-text-gradient {
+            background: linear-gradient(135deg, #fb923c 0%, #ea580c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .step-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .step-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(234, 88, 12, 0.1), 0 10px 10px -5px rgba(234, 88, 12, 0.04);
+        }
+
+        .phone-frame {
+            border: 12px solid #0f172a;
+            border-radius: 3rem;
+            background: #ffffff;
+            position: relative;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
+        }
+
+        .app-icon-bg {
+            background: #111; 
+            background-image: url('https://api.screenshotmachine.com/?key=YOUR_KEY&url=https://your-app-url.com&device=desktop&dimension=1024x768&format=jpg'); 
+            background-size: cover;
+        }
+
+        .logo-box {
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 22%;
+        }
+    </style>
+</head>
+<body class="text-slate-900">
+
+    <!-- Hero Section -->
+    <header class="relative bg-black py-20 px-6 overflow-hidden">
+        <!-- Abstract Background -->
+        <div class="absolute inset-0 opacity-30">
+            <div class="absolute top-[-10%] right-[-10%] w-96 h-96 bg-orange-600 rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-[-10%] left-[-10%] w-96 h-96 bg-orange-900 rounded-full blur-[120px]"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto text-center">
+            <!-- Actual Logo Display Area -->
+            <div class="flex justify-center mb-8">
+                <div class="w-24 h-24 logo-box shadow-2xl shadow-orange-500/20 border border-white/10">
+                    <img src="./logo-demo.png" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHJ4PSIyMiIgZmlsbD0iYmxhY2siLz48cGF0aCBkPSJNNjkgNDNDNjkgMzAgNTggMjAgNDUgMjBIMzVWODBINTBDNjMgODAgNzAgNjggNzAgNTVDNzAgNTEgNjcgNDcgNjIgNDRDNjcgNDIgNjkgMzkgNjkgNDNaTTM1IDI5SDQ1QzUxIDI5IDU2IDM0IDU2IDQwQzU2IDQ2IDUxIDUxIDQ1IDUxSDM1VjI5Wk01MCA3MUgzNVY1OUg1MEM1NiA1OSA2MSA2NCA2MSA3MEM2MSA3NiA1NiA3MSA1MCA3MVoiIGZpbGw9InVybCgjZ3JhZCkiLz48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImdyYWQiIHgxPSIwIiB5MT0iMCIgeDI9IjEwMCIgeTI9IjEwMCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIHN0b3AtY29sb3I9IiNGQjkyM0MiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNFQTU4MEMiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48L3N2Zz4='" alt="Starbase Logo" class="w-full h-full object-cover">
+                </div>
+            </div>
+            
+            <h1 class="text-5xl font-black text-white mb-6 tracking-tight">STARBASE</h1>
+            <p class="text-slate-400 text-xl font-light max-w-xl mx-auto leading-relaxed">
+                Hướng dẫn cài đặt phiên bản Beta dành cho hệ điều hành iOS qua cổng TestFlight.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 -mt-12 pb-24">
+        
+        <!-- Info Bar -->
+        <div class="mt-[30px] bg-white rounded-3xl p-8 shadow-2xl border border-slate-100 mb-16 grid md:grid-cols-3 gap-8 items-center">
+            <div class="md:col-span-2">
+                <span class="text-[10px] font-bold text-orange-600 tracking-[0.2em] uppercase">Phiên bản trực tuyến</span>
+                <p class="text-2xl font-bold text-slate-800 break-all mt-1">cgcalendar-2026.web.app</p>
+            </div>
+            <div class="text-right">
+                <a href="https://cgcalendar-2026.web.app/" target="_blank" class="brand-gradient inline-flex items-center gap-3 px-8 py-4 text-white rounded-2xl font-bold hover:scale-105 transition-transform shadow-lg shadow-orange-500/20">
+                    <i class="fa-solid fa-rocket"></i>
+                    Dùng bản Web
+                </a>
+            </div>
+        </div>
+
+<!-- Step 1 -->
+        <div class="grid md:grid-cols-2 gap-16 items-center mb-24">
+            <div class="order-2 md:order-1">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-2xl brand-gradient flex items-center justify-center text-white text-xl font-bold">1</div>
+                    <h2 class="text-3xl font-bold">Cài đặt TestFlight</h2>
+                </div>
+                <div class="step-card bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm">
+                    <p class="text-slate-500 text-lg mb-8 leading-relaxed">
+                        Mở App Store để tải công cụ quản lý ứng dụng thử nghiệm của Apple.
+                    </p>
+                    <a href="https://apps.apple.com/vn/app/testflight/id899247664?l=vi" target="_blank" class="flex items-center justify-between p-4 bg-slate-50 rounded-2xl border border-slate-200 hover:border-orange-500 transition-colors group">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm text-blue-500 text-2xl">
+                                <i class="fa-brands fa-apple"></i>
+                            </div>
+                            <div>
+                                <span class="block text-[10px] font-bold text-slate-400 uppercase">Tải từ</span>
+                                <span class="font-bold">App Store</span>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-slate-300 group-hover:text-orange-500 group-hover:translate-x-1 transition-all"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="order-1 md:order-2 flex justify-center">
+                <!-- Đã thêm overflow-hidden để ảnh bo góc theo khung và img tag -->
+                <div class="phone-frame w-64 h-[480px] overflow-hidden bg-slate-50 flex items-center justify-center">
+                     <img src="./B1.jpg" alt="Ảnh minh họa bước 1" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="grid md:grid-cols-2 gap-16 items-center mb-24">
+            <div class="flex justify-center">
+                <!-- Đã thay đổi giao diện mô phỏng thành thẻ img -->
+                <div class="phone-frame w-64 h-[480px] overflow-hidden bg-slate-100 flex items-center justify-center">
+                     <img src="./B3.jpg" alt="Ảnh minh họa bước 2" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div>
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-2xl brand-gradient flex items-center justify-center text-white text-xl font-bold">2</div>
+                    <h2 class="text-3xl font-bold">Gia nhập nhóm Beta</h2>
+                </div>
+                <div class="step-card bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm">
+                    <p class="text-slate-500 text-lg mb-8 leading-relaxed">
+                        Sau khi cài TestFlight, nhấn vào liên kết bên dưới để đăng ký nhận bản dựng của Starbase.
+                    </p>
+                    <a href="https://testflight.apple.com/join/U1vPcxb5" target="_blank" class="flex flex-col gap-4">
+                        <button class="bg-black text-white w-full py-5 rounded-2xl font-bold text-lg flex items-center justify-center gap-3 shadow-xl hover:bg-slate-900 transition-all">
+                            <i class="fa-solid fa-link text-orange-500"></i>
+                            Kích hoạt Starbase Beta
+                        </button>
+                        <p class="text-center text-xs text-slate-400 font-medium">Sau đó chọn: "View in TestFlight"</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="grid md:grid-cols-2 gap-16 items-center mb-16">
+            <div>
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-2xl brand-gradient flex items-center justify-center text-white text-xl font-bold">3</div>
+                    <h2 class="text-3xl font-bold">Cài đặt & Trải nghiệm</h2>
+                </div>
+                <div class="step-card bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm relative overflow-hidden">
+                    <!-- Subtle background decoration -->
+                    <div class="absolute top-0 right-0 p-8 opacity-5 text-8xl">
+                        <i class="fa-solid fa-check-double"></i>
+                    </div>
+
+                    <div class="space-y-6 relative z-10">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-green-50 text-green-600 flex items-center justify-center font-bold italic">A</div>
+                            <p class="font-medium text-slate-700">Nhấn <strong>"Cài đặt"</strong> trong giao diện TestFlight vừa mở.</p>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-green-50 text-green-600 flex items-center justify-center font-bold italic">B</div>
+                            <p class="font-medium text-slate-700">Sau khi tải xong, nhấn <strong>"Mở"</strong> để bắt đầu sử dụng Starbase.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                 <!-- Cập nhật khung điện thoại để hiển thị ảnh minh họa Bước 3 -->
+                 <div class="phone-frame w-64 h-[480px] overflow-hidden bg-slate-50 flex items-center justify-center">
+                     <img src="./B2.jpg" alt="Ảnh minh họa bước 3" class="w-full h-full object-cover">
+                 </div>
+            </div>
+    </main>
+
+    <footer class="bg-black py-16 text-center">
+        <div class="w-10 h-10 logo-box mx-auto mb-6 opacity-50 grayscale">
+            <img src="./logo-demo.png" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHJ4PSIyMiIgZmlsbD0iYmxhY2siLz48cGF0aCBkPSJNNjkgNDNDNjkgMzAgNTggMjAgNDUgMjBIMzVWODBINTBDNjMgODAgNzAgNjggNzAgNTVDNzAgNTEgNjcgNDcgNjIgNDRDNjcgNDIgNjkgMzkgNjkgNDNaTTM1IDI5SDQ1QzUxIDI5IDU2IDM0IDU2IDQwQzU2IDQ2IDUxIDUxIDQ1IDUxSDM1VjI5Wk01MCA3MUgzNVY1OUg1MEM1NiA1OSA2MSA2NCA2MSA3MEM2MSA3NiA1NiA3MSA1MCA3MVoiIGZpbGw9InVybCgjZ3JhZCkiLz48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImdyYWQiIHgxPSIwIiB5MT0iMCIgeDI9IjEwMCIgeTI9IjEwMCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIHN0b3AtY29sb3I9IiNGQjkyM0MiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNFQTU4MEMiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48L3N2Zz4='" class="w-full h-full object-cover">
+        </div>
+        <p class="text-slate-600 text-xs tracking-widest uppercase">&copy; 2026 Starbase. To HongPhuoc203.</p>
+    </footer>
+
+</body>
+</html>
